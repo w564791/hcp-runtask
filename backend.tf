@@ -16,6 +16,6 @@ terraform {
 resource "null_resource" "null" {
 
   triggers = {
-    cluster_instance_ids = ["a","b","c"]
+    cluster_instance_ids = "test"
   }
 }
