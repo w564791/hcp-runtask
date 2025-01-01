@@ -30,5 +30,37 @@ resource "aws_vpc_security_group_ingress_rule" "prefix" {
   }
 }
 
+resource "aws_vpc_security_group_ingress_rule" "none-tag" {
+  security_group_id = aws_security_group.example.id
+
+  prefix_list_id = "pl-xxxx0008"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+}
+resource "aws_vpc_security_group_egress_rule" "none-to-all" {
+  security_group_id = aws_security_group.example.id
+
+  prefix_list_id = "0.0.0.0/0"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+   tags = {
+     Name = "example"
+  }
+}
+
+
+resource "aws_vpc_security_group_ingress_rule" "allow-all" {
+  security_group_id = aws_security_group.example.id
+
+  cidr_ipv4 = "0.0.0.0/0"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+  tags = {
+     Name = "example"
+  }
+}
 
 
