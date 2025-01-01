@@ -21,7 +21,7 @@ resource "aws_vpc_security_group_ingress_rule" "example" {
 resource "aws_vpc_security_group_ingress_rule" "prefix" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxxx008"
+  prefix_list_id = "pl-xxxx"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
