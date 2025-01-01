@@ -29,3 +29,14 @@ resource "aws_vpc_security_group_ingress_rule" "prefix" {
      Name = "example"
   }
 }
+
+
+
+resource "aws_security_group_rule" "rejected" {
+  type              = "ingress"
+  from_port         = 0
+  to_port           = 65535
+  protocol          = "tcp"
+  cidr_blocks       = ["1.1.1.1/32"]
+  security_group_id = aws_security_group.example.id
+}
