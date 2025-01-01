@@ -61,9 +61,6 @@ resource "aws_vpc_security_group_ingress_rule" "allow-all" {
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
-  tags = {
-     Name = "example"
-  }
 }
 
 
