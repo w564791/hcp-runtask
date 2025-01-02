@@ -69,3 +69,14 @@ resource "aws_vpc_security_group_ingress_rule" "allow-all" {
 }
 
 
+resource "aws_vpc_security_group_ingress_rule" "prefix-xxx" {
+  security_group_id = aws_security_group.example.id
+
+  prefix_list_id = "pl-xxx"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+  tags = {
+     Name = "example"
+  }
+}
