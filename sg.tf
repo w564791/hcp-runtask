@@ -18,17 +18,7 @@ resource "aws_vpc_security_group_ingress_rule" "example" {
      Name = "example"
   }
 }
-resource "aws_vpc_security_group_ingress_rule" "example-public" {
-  security_group_id = aws_security_group.example.id
 
-  cidr_ipv4   = "112.8.8.8/32"
-  from_port   = 80
-  ip_protocol = "tcp"
-  to_port     = 80
-  tags = {
-     Name = "example"
-  }
-}
 resource "aws_vpc_security_group_ingress_rule" "prefix" {
   security_group_id = aws_security_group.example.id
 
