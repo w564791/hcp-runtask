@@ -38,7 +38,7 @@ resource "aws_vpc_security_group_ingress_rule" "example" {
 resource "aws_vpc_security_group_ingress_rule" "prefix" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxxx"
+  prefix_list_id = "pl-xxxx000"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
@@ -63,7 +63,7 @@ resource "aws_vpc_security_group_ingress_rule" "none-tag" {
 resource "aws_vpc_security_group_egress_rule" "none-to-all" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxx"
+  prefix_list_id = "pl-xxx0003"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
@@ -89,7 +89,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow-all" {
 resource "aws_vpc_security_group_ingress_rule" "prefix-xxx" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxx"
+  prefix_list_id = "pl-xxx0003"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
@@ -101,7 +101,7 @@ resource "aws_vpc_security_group_ingress_rule" "prefix-xxx" {
 resource "aws_vpc_security_group_ingress_rule" "no-tags" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxx"
+  prefix_list_id = "pl-xxx0003"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
@@ -112,7 +112,7 @@ resource "aws_vpc_security_group_ingress_rule" "no-tags" {
 resource "aws_vpc_security_group_ingress_rule" "no-tags-name" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxx"
+  prefix_list_id = "pl-xxx0003"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
