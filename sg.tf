@@ -94,3 +94,12 @@ resource "aws_vpc_security_group_ingress_rule" "no-tags" {
      Name = "example"
   }
 }
+resource "aws_vpc_security_group_ingress_rule" "no-tags-name" {
+  security_group_id = aws_security_group.example.id
+
+  prefix_list_id = "pl-xxxf"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+
+}
