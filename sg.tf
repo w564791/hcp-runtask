@@ -4,7 +4,7 @@ resource "aws_security_group" "example" {
   vpc_id      = var.vpc_id
   tags = {
     Name = "example"
-    managed-bys = "abc"
+    managed-by = "abc"
     business-line = "cde"
   }
   ingress {
@@ -36,7 +36,8 @@ resource "aws_vpc_security_group_ingress_rule" "prefix" {
   ip_protocol = "tcp"
   to_port     = 80
   tags = {
-     Names = "example"
+     Name = "example"
+     xxx = "aac"
   }
 }
 
