@@ -4,6 +4,8 @@ resource "aws_security_group" "example" {
   vpc_id      = var.vpc_id
   tags = {
     Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
   }
 }
 
