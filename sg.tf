@@ -15,6 +15,12 @@ resource "aws_security_group" "example" {
     protocol         = "-1"
     cidr_blocks      = ["10.0.0.3/32"]
   }
+  ingress {
+    from_port        = 22
+    to_port          = 22
+    protocol         = "-1"
+    cidr_blocks      = ["11.0.0.3/32"]
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "example" {
