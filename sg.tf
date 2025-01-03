@@ -120,3 +120,14 @@ tags = {
      Name = "example"
   }
 }
+
+resource "aws_vpc_security_group_ingress_rule" "sggggg" {
+  security_group_id = aws_security_group.example.id
+  referenced_security_group_id = "sg-666c"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+tags = {
+     Name = "example"
+  }
+}
