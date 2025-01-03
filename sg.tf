@@ -6,6 +6,8 @@ resource "aws_security_group" "example" {
     Name = "example"
     managed-by = "abc"
     business-line = "cde"
+    eee = "ffc"
+    owner = "abcd"
   }
   ingress {
     from_port        = 22
