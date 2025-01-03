@@ -4,6 +4,8 @@ resource "aws_security_group" "example" {
   vpc_id      = var.vpc_id
   tags = {
     Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
   }
 }
 
@@ -34,7 +36,7 @@ resource "aws_vpc_security_group_ingress_rule" "prefix" {
 resource "aws_vpc_security_group_ingress_rule" "none-tag" {
   security_group_id = aws_security_group.example.id
 
-  prefix_list_id = "pl-xxxx0008"
+  prefix_list_id = "pl-xxxx008"
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
@@ -88,4 +90,7 @@ resource "aws_vpc_security_group_ingress_rule" "no-tags" {
   from_port   = 80
   ip_protocol = "tcp"
   to_port     = 80
+  tags = {
+     Name = "example"
+  }
 }
