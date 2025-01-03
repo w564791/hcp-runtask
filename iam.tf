@@ -10,7 +10,7 @@ resource "aws_iam_policy" "policy" {
     Statement = [
       {
         Action = [
-          "ec2:Describe*",
+          "rds:Delete*",
         ]
         Effect   = "Allow"
         Resource = "*"
@@ -42,7 +42,7 @@ resource "aws_iam_role" "role" {
 data "aws_iam_policy_document" "policy" {
   statement {
     effect    = "Allow"
-    actions   = ["ec2:Describe*"]
+    actions   = ["iam:UpdateGroup"]
     resources = ["*"]
   }
 }
