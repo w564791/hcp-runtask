@@ -7,6 +7,13 @@ resource "aws_security_group" "example" {
     managed-by = "abc"
     business-line = "cde"
   }
+  ingress {
+    from_port        = 22
+    to_port          = 22
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "example" {
