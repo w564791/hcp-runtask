@@ -20,7 +20,7 @@ resource "aws_security_group" "example" {
     to_port          = 3306
     protocol         = "-1"
     prefix_list_ids = ["pl-aaa0009","pl-aaa0008","pl-xxxx000"]
-    cidr_blocks      = ["10.0.0.3/32","10.0.0.0/8","11.0.0.3/32","11.0.0.5/32"]
+    cidr_blocks      = ["10.0.0.3/32","10.0.0.0/8","10.1.0.3/32","10.2.0.5/32"]
   }
 }
 
