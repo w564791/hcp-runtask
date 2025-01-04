@@ -18,6 +18,13 @@ resource "aws_iam_policy" "policy" {
       },
     ]
   })
+    tags = {
+    Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
+    eee = "ffc"
+    owner = "abcd"
+  }
 }
 
 
@@ -37,6 +44,13 @@ data "aws_iam_policy_document" "assume_role" {
 resource "aws_iam_role" "role" {
   name               = "test-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
+    tags = {
+    Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
+    eee = "ffc"
+    owner = "abcd"
+  }
 }
 
 
@@ -52,6 +66,13 @@ resource "aws_iam_policy" "policy-standard" {
   name        = "test-policy"
   description = "A test policy"
   policy      = data.aws_iam_policy_document.policy.json
+    tags = {
+    Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
+    eee = "ffc"
+    owner = "abcd"
+  }
 }
 
 resource "aws_iam_policy_attachment" "test-attach" {
