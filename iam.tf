@@ -11,6 +11,7 @@ resource "aws_iam_policy" "policy" {
       {
         Action = [
           "rds:Delete*",
+          "s3:GetObject"
         ]
         Effect   = "Allow"
         Resource = "*"
