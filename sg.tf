@@ -85,7 +85,17 @@ resource "aws_vpc_security_group_ingress_rule" "allow-all" {
   }
 }
 
+resource "aws_vpc_security_group_ingress_rule" "allow-101" {
+  security_group_id = aws_security_group.example.id
 
+  cidr_ipv4 = "101.28.0.11/32"
+  from_port   = 80
+  ip_protocol = "tcp"
+  to_port     = 80
+  tags = {
+     Name = "example"
+  }
+}
 resource "aws_vpc_security_group_ingress_rule" "prefix-xxx" {
   security_group_id = aws_security_group.example.id
 
