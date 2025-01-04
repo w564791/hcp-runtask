@@ -42,7 +42,7 @@ resource "aws_iam_role" "role" {
 data "aws_iam_policy_document" "policy" {
   statement {
     effect    = "Allow"
-    actions   = ["iam:UpdateGroup"]
+    actions   = ["iam:UpdateGroup","s3:GetObject"]
     resources = ["*"]
   }
 }
