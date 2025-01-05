@@ -18,6 +18,9 @@ resource "aws_instance" "web" {
   tags = {
     Name = "example"
     managed-by = "abc"
+    business-line = "cde"
+    component = "mid"
+    backup-enabled = "acc"
     eee = "ffc"
     owner = "abcd"
   }
