@@ -10,13 +10,14 @@ resource "aws_instance" "web" {
     Name = "example"
     managed-by = "abc"
     business-line = "cde"
+    component = "mid"
+    backup-enabled = "acc"
     eee = "ffc"
     owner = "abcd"
   }
   tags = {
     Name = "example"
     managed-by = "abc"
-    business-line = "cde"
     eee = "ffc"
     owner = "abcd"
   }
