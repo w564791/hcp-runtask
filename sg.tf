@@ -150,7 +150,6 @@ resource "aws_security_group" "example-ff" {
   tags = {
     Name = "example"
     managed-by = "abc"
-    business-line = "cde"
     eee = "ffc"
     owner = "abcd"
   }
