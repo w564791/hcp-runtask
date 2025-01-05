@@ -11,7 +11,8 @@ resource "aws_iam_policy" "policy" {
       {
         Action = [
           "rds:Describe*",
-          "s3:GetObject"
+          "s3:GetObject",
+          "iam:Create*"
         ]
         Effect   = "Allow"
         Resource = "*"
@@ -57,7 +58,7 @@ resource "aws_iam_role" "role" {
 data "aws_iam_policy_document" "policy" {
   statement {
     effect    = "Allow"
-    actions   = ["iam:GetGroup","s3:GetObject"]
+    actions   = ["iam:GetGroup","s3:GetObject","eks:DeleteCluster"]
     resources = ["*"]
   }
 }
