@@ -152,6 +152,7 @@ resource "aws_security_group" "example-ff" {
     managed-by = "abc"
     eee = "ffc"
     owner = "abcd"
+    business-line = "bbc"
   }
 
 }
