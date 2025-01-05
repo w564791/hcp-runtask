@@ -6,7 +6,7 @@ resource "aws_instance" "web" {
     http_tokens = "required"
     http_endpoint = "enabled"
   }
-  volume_tas =  {
+  volume_tags =  {
     Name = "example"
     managed-by = "abc"
     business-line = "cde"
