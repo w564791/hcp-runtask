@@ -24,6 +24,6 @@ resource "aws_instance" "se" {
     backup-enabled = "acc"
     eee = "ffc"
     owner = "abcd"
-    service-name = "dd"
+    cluster-name = "a"
   }
 }
