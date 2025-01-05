@@ -16,13 +16,6 @@ terraform {
 }
 
 
-resource "null_resource" "null" {
-
-  triggers = {
-    cluster_instance_ids = "test"
-  }
-}
-
 provider "aws" {
   region = "ap-northeast-1"
   access_key = var.AWS_ACCESS_KEY_ID
