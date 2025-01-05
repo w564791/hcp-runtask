@@ -1,5 +1,5 @@
 resource "aws_instance" "se" {
-  count = 10
+  count = 2
   ami           = "ami-acd"
   instance_type = "t3.micro"
   associate_public_ip_address = false
