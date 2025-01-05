@@ -25,5 +25,6 @@ resource "aws_instance" "se" {
     eee = "ffc"
     owner = "abcd"
     cluster-name = "a"
+    service-name = "ddv"
   }
 }
