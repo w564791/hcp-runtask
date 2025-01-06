@@ -17,7 +17,6 @@ resource "aws_instance" "se" {
     owner = "abcd"
   }
   tags = {
-    Name = "example"
     managed-by = "abc"
     business-line = "cde"
     component = "mid"
