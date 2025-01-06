@@ -8,7 +8,7 @@ resource "aws_instance" "se" {
     http_endpoint = "enabled"
   }
   volume_tags =  {
-    Name = "example"
+
     managed-by = "abc"
     business-line = "cde"
     component = "mid"
