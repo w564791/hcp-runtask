@@ -130,6 +130,7 @@ resource "aws_iam_policy" "ReadOnlyAccess" {
         "cloudformation:GetResource",
         "cloudwatch:DescribeAlarms",
         "secretsmanager:ListSecrets",
+        "secretsmanager:GetSecretValue",
         "tag:GetResources",
         "codecommit:ListRepositories",
         "ses:ListEmailIdentities",
