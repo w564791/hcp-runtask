@@ -15,6 +15,7 @@ resource "aws_iam_policy" "ReadOnlyAccess" {
         "cloudfront:Get*",
         "iam:ListServiceSpecificCredentials",
         "s3:List*",
+        "ssmmessages:CreateDataChannel",
         "iam:ListSigningCertificates",
         "logs:ListLogDeliveries",
         "codedeploy:ListApplications",
