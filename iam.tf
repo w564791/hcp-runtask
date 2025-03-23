@@ -56,11 +56,10 @@ resource "aws_iam_policy" "policy3" {
     owner = "abcd"
   }
 }
-resource "aws_iam_policy" "policy" {
+resource "aws_iam_policy" "policy4" {
   name        = "test_policy"
   path        = "/"
   description = "My test policy"
-
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
   policy = jsonencode({
