@@ -27,8 +27,64 @@ resource "aws_iam_policy" "policy" {
     owner = "abcd"
   }
 }
+resource "aws_iam_policy" "policy3" {
+  name        = "test_policy"
+  path        = "/"
+  description = "My test policy"
 
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "rds:Describe*",
+          "s3:GetObject",
+          "iam:CreateUser"
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+    ]
+  })
+    tags = {
+    Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
+    eee = "ffc"
+    owner = "abcd"
+  }
+}
+resource "aws_iam_policy" "policy" {
+  name        = "test_policy"
+  path        = "/"
+  description = "My test policy"
 
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "rds:Describe*",
+          "s3:GetObject",
+          "iam:Create*"
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+    ]
+  })
+    tags = {
+    Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
+    eee = "ffc"
+    owner = "abcd"
+  }
+}
 data "aws_iam_policy_document" "assume_role" {
   statement {
     effect = "Allow"
