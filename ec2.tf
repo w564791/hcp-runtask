@@ -26,4 +26,15 @@ resource "aws_instance" "web" {
     service-name = "dd"
     cluster-name = "a"
   }
+  tags_all = {
+    Name = "example"
+    managed-by = "abc"
+    business-line = "cde"
+    component = "mid"
+    backup-enabled = "acc"
+    eee = "ffc"
+    owner = "abcd"
+    service-name = "dd"
+    cluster-name = "a"
+  }
 }
