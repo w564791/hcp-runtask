@@ -7,6 +7,12 @@ resource "aws_instance" "se" {
     http_tokens = "required"
     http_endpoint = "enabled"
   }
+  root_block_device {
+    encrypted  = true
+  }
+  ebs_block_device {
+    
+  }
   volume_tags =  {
 
     managed-by = "abc"
