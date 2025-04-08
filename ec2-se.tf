@@ -9,7 +9,6 @@ resource "aws_instance" "se" {
   }
   root_block_device {
     encrypted  = true
-    device_name = "/dev/sdb"
   }
   ebs_block_device {
     device_name = "/dev/sdh"
