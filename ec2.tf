@@ -7,6 +7,12 @@ resource "aws_instance" "web" {
     http_tokens = "required"
     http_endpoint = "enabled"
   }
+  root_block_device {
+    encrypted  = true
+  }
+  ebs_block_device {
+    device_name = "/dev/sdh"
+  }
   volume_tags =  {
     Name = "example"
     managed-by = "abc"
