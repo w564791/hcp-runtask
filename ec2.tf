@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  ami           = "ami-acd"
+  ami           = "ami-hijklmnop"
   instance_type = "t3.micro"
   key_name = "key-1234"
   associate_public_ip_address = false

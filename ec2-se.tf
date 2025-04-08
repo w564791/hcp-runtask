@@ -1,6 +1,6 @@
 resource "aws_instance" "se" {
   count = 1
-  ami           = "ami-acd"
+  ami           = "ami-hijklmnop"
   instance_type = "t3.micro"
   associate_public_ip_address = false
   metadata_options {
