@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
   ami           = "ami-acd"
   instance_type = "t3.micro"
-  key_name = "key-aaaa"
+  key_name = "key-1234"
   associate_public_ip_address = false
   metadata_options {
     http_tokens = "required"
