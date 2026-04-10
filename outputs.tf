@@ -8,6 +8,11 @@ output "test-data" {
          {
         name = "ken-test-2"
         managed-by = "ken"
+        business-line = "devops"
+        },
+         {
+        name = "ken-test-3"
+        managed-by = "ken"
         business-line = "ops"
         }
     ]
